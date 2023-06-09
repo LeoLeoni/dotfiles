@@ -14,4 +14,4 @@ else
 fi
 ln -sf $PWD/alacritty $HOME/.config/alacritty/
 
-ln -sf $PWD/.bashrc $HOME/.bashrc
+ln -sf $PWD/bashrc $HOME/.bashrc
