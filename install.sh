@@ -1,3 +1,4 @@
+#!/bin/zsh
 # Neovim
 if [ ! -d "$HOME/.config/nvim/.git" ]; then
   git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
@@ -12,6 +13,7 @@ if [ -d "$HOME/.config/alacritty/catppuccin/.git" ]; then
 else
   git clone https://github.com/catppuccin/alacritty.git $HOME/.config/alacritty/catppuccin
 fi
-ln -sf $PWD/alacritty $HOME/.config/alacritty/
+ln -sf $PWD/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
-ln -sf $PWD/bashrc $HOME/.bashrc
+ln -sf $PWD/zshrc $HOME/.zshrc
+(cd; source .zshrc)
