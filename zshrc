@@ -24,3 +24,4 @@ alias g='git'
 alias n='nvim'
 # . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
+test -f $HOME/.workrc && source $HOME/.workrc
