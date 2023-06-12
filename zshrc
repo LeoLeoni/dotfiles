@@ -21,6 +21,8 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias g='git'
+alias gs='git status'
+alias gd='git diff'
 alias n='nvim'
 # . $HOME/.asdf/asdf.sh
 # . $HOME/.asdf/completions/asdf.bash
