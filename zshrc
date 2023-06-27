@@ -24,6 +24,4 @@ alias g='git'
 alias gs='git status'
 alias gd='git diff'
 alias n='nvim'
-# . $HOME/.asdf/asdf.sh
-# . $HOME/.asdf/completions/asdf.bash
 test -f $HOME/.workrc && source $HOME/.workrc

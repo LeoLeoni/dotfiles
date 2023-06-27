@@ -46,6 +46,20 @@ local plugins = {
   {
     "nvim-tree/nvim-tree.lua",
     opts = require "custom.configs.nvimtree",
+  },
+  {
+    "folke/todo-comments.nvim",
+    lazy = false,
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {
+      highlight = {
+        before = "fg",
+        keyword = "fg",
+      },
+      search = {
+        pattern = [[\b(KEYWORDS)\b]]
+      }
+    }
   }
 }
 return plugins
