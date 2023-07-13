@@ -15,5 +15,7 @@ else
 fi
 ln -sf $PWD/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
 
+ln -sf $PWD/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
+
 ln -sf $PWD/zshrc $HOME/.zshrc
 source $HOME/.zshrc
