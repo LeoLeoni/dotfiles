@@ -14,7 +14,9 @@ local sources = {
    --formatting.prettier,
    formatting.prettierd,
    formatting.stylua,
-   formatting.rustfmt
+   formatting.rustfmt,
+   formatting.gofmt,
+   formatting.goimports,
 }
 
 null_ls.setup {

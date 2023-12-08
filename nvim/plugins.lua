@@ -23,7 +23,8 @@ local plugins = {
         'json',
         'kotlin',
         'scss',
-        'rust'
+        'rust',
+        'go',
       }
     }
   },
@@ -40,6 +41,7 @@ local plugins = {
         'prettier',
         'rust-analyzer',
         'stylua',
+        'gopls',
       }
     }
   },
