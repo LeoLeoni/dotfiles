@@ -62,6 +62,13 @@ local plugins = {
         pattern = [[\b(KEYWORDS)\b]]
       }
     }
+  },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = {
+      current_line_blame = true,
+      numhl = true,
+    }
   }
 }
 return plugins
