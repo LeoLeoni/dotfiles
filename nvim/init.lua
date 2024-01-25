@@ -13,4 +13,13 @@ autocmd("FileType", {
 		opt.softtabstop = 4
 	end,
 })
+
+autocmd("FileType", {
+	pattern = { "json", "javascript", "typescript", "typescriptreact", "css", "scss" },
+	callback = function()
+		opt.shiftwidth = 2
+		opt.tabstop = 2
+		opt.softtabstop = 2
+	end,
+})
 -- vim.api.nvim_clear_autocmd("BufWritePre", {})
