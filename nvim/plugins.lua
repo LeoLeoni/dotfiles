@@ -38,10 +38,10 @@ local plugins = {
         'eslint_d',
         'json-lsp',
         'ktlint',
-        'prettier',
+        'prettierd',
         'rust-analyzer',
         'stylua',
-        'gopls',
+        -- 'gopls',
       }
     }
   },

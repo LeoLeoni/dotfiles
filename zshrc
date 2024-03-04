@@ -16,12 +16,16 @@ promptinit
 
 DISABLE_AUTO_TITLE="true"
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias ll="ls -alF $@"
+alias la="ls -A $@"
+alias l="ls -CF $@"
 
-alias g='git'
-alias gs='git status'
-alias gd='git diff'
-alias n='nvim'
+alias g="git $@"
+alias gs="git status $@"
+alias gd="git diff $@"
+alias gc="git checkout $@"
+alias ga="git add $@"
+alias n="nvim $@"
+
+# keep work specific stuff separate
 test -f $HOME/.workrc && source $HOME/.workrc
