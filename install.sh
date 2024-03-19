@@ -2,17 +2,14 @@
 # Install packages for ubuntu/debian
 if [ -d "/bin/apt" ]; then
   sudo apt update
-  sudo apt install tmux
+  yes | sudo apt install tmux fzf zoxide
   # ubuntu/debian doesn't ship with latest nvim
   sudo wget -O /usr/bin/nvim https://github.com/neovim/neovim/releases/download/v0.9.5/nvim.appimage 
   sudo chmod 555 /usr/bin/nvim
 
   if [ -d "/bin/snap" ]; then 
-    sudo snap install alacritty --classic
+    yes | sudo snap install alacritty --classic
   fi
-# Arch
-else if [ -d "/bin/pacman" ]; then
-  sudo pacman -S tmux zsh neovim
 fi
 
 # Neovim
@@ -21,6 +18,7 @@ if [ ! -d "$HOME/.config/nvim/.git" ]; then
 # else
   # (cd $HOME/.config/nvim; git pull)
 fi
+mkdir -p $HOME/.config/nvim/lua/custom
 ln -sf $PWD/nvim $HOME/.config/nvim/lua/custom
 
 # Alacritty plus theme
@@ -29,8 +27,10 @@ if [ -d "$HOME/.config/alacritty/catppuccin/.git" ]; then
 else
   git clone https://github.com/catppuccin/alacritty.git $HOME/.config/alacritty/catppuccin
 fi
+mkdir -p $HOME/.config/alacritty
 ln -sf $PWD/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
+mkdir -p $HOME/.config/tmux
 ln -sf $PWD/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
 ln -sf $PWD/zshrc $HOME/.zshrc

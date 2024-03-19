@@ -20,6 +20,15 @@ alias ll="ls -alF $@"
 alias la="ls -A $@"
 alias l="ls -CF $@"
 
+compinit
+
+# zoxide
+eval "$(zoxide init --cmd cd zsh)"
+
+alias ll="ls -alF $@"
+alias la="ls -A $@"
+alias l="ls -CF $@"
+
 alias g="git $@"
 alias gs="git status $@"
 alias gd="git diff $@"
