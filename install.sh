@@ -13,13 +13,13 @@ if [ -d "/bin/apt" ]; then
 fi
 
 # Neovim
-if [ ! -d "$HOME/.config/nvim/.git" ]; then
-  git clone https://github.com/NvChad/NvChad $HOME/.config/nvim --depth 1
+# if [ ! -d "$HOME/.config/nvim/.git" ]; then
+#   git clone https://github.com/NvChad/NvChad $HOME/.config/nvim --depth 1
 # else
   # (cd $HOME/.config/nvim; git pull)
 fi
 mkdir -p $HOME/.config/nvim/lua/custom
-ln -sf $PWD/nvim $HOME/.config/nvim/lua/custom
+ln -sf $PWD/nvim $HOME/.config/nvim
 
 # Alacritty plus theme
 if [ -d "$HOME/.config/alacritty/catppuccin/.git" ]; then

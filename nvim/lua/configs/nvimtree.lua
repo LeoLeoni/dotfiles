@@ -1,13 +1,9 @@
 local options = {
-  git = {
-    enable = true
-  },
+  git = { enable = true },
   renderer = {
     highlight_git = true,
     icons = {
-      show = {
-        git = true
-      },
+      show = { git = true },
       glyphs = {
         git = {
           unstaged = "",
@@ -17,10 +13,10 @@ local options = {
           untracked = "",
           deleted = "",
           ignored = "",
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 }
 
 return options
