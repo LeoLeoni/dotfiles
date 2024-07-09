@@ -5,7 +5,7 @@ local options = {
     rust = { "rustfmt" },
     javascript = { "eslint_d" },
     typescript = { "eslint_d" },
-    tsx = { "eslint_d" },
+    typescriptreact = { "eslint_d" },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },

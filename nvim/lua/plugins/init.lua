@@ -1,6 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
+    lazy = false,
     -- event = 'BufWritePre', -- uncomment for format on save
     config = function()
       require "configs.conform"
@@ -21,7 +22,7 @@ return {
         "stylua",
         "html-lsp",
         "css-lsp",
-        -- "prettier",
+        "prettier",
         "prettierd",
         "typescript-language-server",
         "eslint_d",
