@@ -1,14 +1,20 @@
 return {
-  {
-    "stevearc/conform.nvim",
-    lazy = false,
-    -- event = 'BufWritePre', -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
-  },
+--   {
+--     "stevearc/conform.nvim",
+--     lazy = false,
+--     -- event = 'BufWritePre', -- uncomment for format on save
+--     config = function()
+--       require "configs.conform"
+--     end,
+--   },
   {
     "neovim/nvim-lspconfig",
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+      config = function()
+        require "configs.null-ls"
+      end,
+    },
     config = function()
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"

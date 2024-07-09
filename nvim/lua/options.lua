@@ -6,6 +6,7 @@ local o = vim.o
 local autocmd = vim.api.nvim_create_autocmd
 
 o.cursorlineopt = "both"
+o.number = true
 o.relativenumber = true
 o.shell = "/bin/zsh"
 
