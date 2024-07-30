@@ -30,6 +30,9 @@ fi
 mkdir -p $HOME/.config/alacritty
 ln -sf $PWD/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
+mkdir -p $HOME/.config/kitty
+ln -sf $PWD/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+
 mkdir -p $HOME/.config/tmux
 ln -sf $PWD/tmux/tmux.conf $HOME/.config/tmux/tmux.conf
 
