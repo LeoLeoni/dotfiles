@@ -17,6 +17,10 @@ map("n", "N", "Nzz")
 map("n", "*", "*zz")
 map("n", "#", "#zz")
 
+map("n", "K", function()
+  vim.lsp.buf.hover()
+end, { desc = "LSP Hover" })
+
 map("n", "<leader>fg", "<cmd> Telescope live_grep <CR>", { desc = "live grep" })
 map("n", "<leader>gr", "<cmd> Telescope lsp_references <CR>", { desc = "telescope references" })
 map("n", "<leader>fw", "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", { desc = "workspace symbols" })

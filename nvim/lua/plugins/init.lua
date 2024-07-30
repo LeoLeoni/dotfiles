@@ -1,20 +1,32 @@
 return {
---   {
---     "stevearc/conform.nvim",
---     lazy = false,
---     -- event = 'BufWritePre', -- uncomment for format on save
---     config = function()
---       require "configs.conform"
---     end,
---   },
+  {
+    "stevearc/conform.nvim",
+    lazy = false,
+    -- event = 'BufWritePre', -- uncomment for format on save
+    config = function()
+      require "configs.conform"
+    end,
+  },
+  {
+    "mfussenegger/nvim-lint",
+    lazy = false,
+    config = function()
+      require("lint").linters_by_ft = {
+        kotlin = { "ktlint" },
+        typescript = { "eslint_d" },
+        typescriptreact = { "eslint_d" },
+      }
+    end,
+  },
   {
     "neovim/nvim-lspconfig",
-    dependencies = {
-      "jose-elias-alvarez/null-ls.nvim",
-      config = function()
-        require "configs.null-ls"
-      end,
-    },
+    -- NOTE: Re enable null-ls if the other linters are a PITA
+    -- dependencies = {
+    --   "jose-elias-alvarez/null-ls.nvim",
+    --   config = function()
+    --     require "configs.null-ls"
+    --   end,
+    -- },
     config = function()
       require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
@@ -33,6 +45,8 @@ return {
         "typescript-language-server",
         "eslint_d",
         "json-lsp",
+        "kotlin-language-server",
+        "java-language-server",
         "ktlint",
         "rust-analyzer",
         -- "gopls",
@@ -58,6 +72,7 @@ return {
         "scss",
         "rust",
         "go",
+        "java",
       },
     },
   },
@@ -82,4 +97,18 @@ return {
       numhl = true,
     },
   },
+  -- {
+  --   "SmiteshP/nvim-navic",
+  --   event = "CursorMoved",
+  --   config = function()
+  --     dofile(vim.g.base46_cache .. "navic")
+  --
+  --     require("nvim-navic").setup {
+  --       highlight = true,
+  --       lsp = { auto_attach = true },
+  --     }
+  --
+  --     vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+  --   end,
+  -- },
 }
