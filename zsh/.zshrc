@@ -1,4 +1,5 @@
 autoload -Uz promptinit
+autoload -Uz compinit
 autoload -Uz vcs_info
 # updates the window title whenever a command is run
 function xtitle () {
