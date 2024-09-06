@@ -8,5 +8,3 @@ o.cursorlineopt = "both"
 o.number = true
 o.relativenumber = true
 o.shell = "/bin/zsh"
-
-require "autocmds"

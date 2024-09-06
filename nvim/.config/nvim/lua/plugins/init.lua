@@ -33,27 +33,6 @@ return {
     end,
   },
   {
-    "williamboman/mason.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "stylua",
-        "html-lsp",
-        "css-lsp",
-        "prettier",
-        "prettierd",
-        "typescript-language-server",
-        "eslint_d",
-        "json-lsp",
-        "kotlin-language-server",
-        "java-language-server",
-        "ktlint",
-        "rust-analyzer",
-        -- "gopls",
-      },
-    },
-  },
-  {
     "nvim-tree/nvim-tree.lua",
     opts = require "configs.nvimtree",
   },
