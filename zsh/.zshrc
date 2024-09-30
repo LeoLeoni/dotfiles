@@ -12,7 +12,7 @@ function precmd () {
 
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
-PROMPT='%B%F{green}%n@%m%f%b %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f%% '
+PROMPT='%B%F{green}%n%f%b %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f%% '
 promptinit
 
 DISABLE_AUTO_TITLE="true"
