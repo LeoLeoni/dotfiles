@@ -3,14 +3,14 @@
 # Install packages for ubuntu/debian
 if [ -d "/bin/apt" ]; then
   sudo apt update
+
+  # alacritty deps
+  yes | sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+
   yes | sudo apt install tmux fzf stow
   # ubuntu/debian doesn't ship with latest nvim
   sudo wget -O /usr/bin/nvim https://github.com/neovim/neovim/releases/download/v0.10.1/nvim.appimage
   sudo chmod 755 /usr/bin/nvim
-
-  if [ -d "/bin/snap" ]; then 
-    yes | sudo snap install alacritty --classic
-  fi
 
   # Needed for zsh
   if [ -d "/bin/zoxide" ]; then
@@ -18,11 +18,10 @@ if [ -d "/bin/apt" ]; then
   fi
 fi
 
-# TODO: script for installing kitty
+# TODO: script for installing alacritty
 
 stow zsh
 stow alacritty
-stow kitty
 stow nvim
 stow tmux
 
