@@ -7,8 +7,8 @@ local code_actions = null_ls.builtins.code_actions
 local sources = {
    --formatting.eslint,
    -- formatting.eslint_d,
-   diagnostics.eslint_d,
-   code_actions.eslint_d,
+   diagnostics.eslint,
+   code_actions.eslint,
    -- formatting.ktlint,
    -- diagnostics.ktlint,
    --formatting.prettier,

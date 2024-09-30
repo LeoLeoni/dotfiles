@@ -5,8 +5,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "catppuccin",
-  theme_toggle = { "catppuccin", "tokyonight" },
+  theme = "chadracula-evondev",
+  theme_toggle = { "chadracula-evondev", "chadracula-evondev" },
   telescope = { style = "bordered" },
 
   hl_override = {
@@ -36,7 +36,8 @@ M.mason = {
     "prettier",
     "prettierd",
     "typescript-language-server",
-    "eslint_d",
+    -- "eslint_d",
+    "eslint-lsp",
     "json-lsp",
     "kotlin-language-server",
     "ktlint",
