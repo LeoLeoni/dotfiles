@@ -5,8 +5,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "chadracula-evondev",
-  theme_toggle = { "chadracula-evondev", "chadracula-evondev" },
+  theme = "tokyonight",
+  theme_toggle = { "tokyonight", "tokyonight" },
   telescope = { style = "bordered" },
 
   hl_override = {
@@ -17,7 +17,7 @@ M.base46 = {
     Substitute = { bg = "vibrant_green" },
   },
 
-  integrations = { "navic" }, -- FIX: not working
+  integrations = { "navic", "todo" },
 }
 
 -- Removes the space for NvimTree
@@ -34,7 +34,6 @@ M.mason = {
     "html-lsp",
     "css-lsp",
     "prettier",
-    "prettierd",
     "typescript-language-server",
     -- "eslint_d",
     "eslint-lsp",

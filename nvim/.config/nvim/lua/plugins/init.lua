@@ -13,8 +13,8 @@ return {
     config = function()
       require("lint").linters_by_ft = {
         kotlin = { "ktlint" },
-        typescript = { "eslint_d" },
-        typescriptreact = { "eslint_d" },
+        typescript = { "eslint" },
+        typescriptreact = { "eslint" },
       }
     end,
   },
@@ -59,7 +59,9 @@ return {
     "folke/todo-comments.nvim",
     lazy = false,
     dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
+    config = function ()
+      dofile(vim.g.base46_cache .. "todo")
+      require("todo-comments").setup {
       highlight = {
         before = "fg",
         keyword = "fg",
@@ -67,7 +69,8 @@ return {
       search = {
         pattern = [[\b(KEYWORDS)\b]],
       },
-    },
+      }
+    end
   },
   {
     "lewis6991/gitsigns.nvim",
@@ -76,27 +79,27 @@ return {
       numhl = true,
     },
   },
-  -- {
-  --   "SmiteshP/nvim-navic",
-  --   event = "CursorMoved",
-  --   config = function()
-  --     dofile(vim.g.base46_cache .. "navic")
-  --
-  --     require("nvim-navic").setup {
-  --       highlight = true,
-  --       lsp = { auto_attach = true },
-  --     }
-  --
-  --     vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-  --   end,
-  -- },
+  {
+    "SmiteshP/nvim-navic",
+    event = "CursorMoved",
+    config = function()
+      dofile(vim.g.base46_cache .. "navic")
+
+      require("nvim-navic").setup {
+        highlight = true,
+        lsp = { auto_attach = true },
+      }
+
+      vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+    end,
+  },
   {
     "ggandor/leap.nvim",
     lazy = false,
     dependencies = { "tpope/vim-repeat" },
     config = function()
-      vim.keymap.set({'n', 'x', 'o'}, 's',  '<Plug>(leap-forward)')
-      vim.keymap.set({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
+      vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
+      vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
     end,
   },
 }
