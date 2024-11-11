@@ -1,3 +1,4 @@
+[general]
 import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [env]
@@ -22,7 +23,8 @@ y = 0
 action = "ToggleFullscreen"
 key = "F11"
 
-[shell]
+[terminal]
+[terminal.shell]
 program = "/bin/zsh"
 
 [window]
