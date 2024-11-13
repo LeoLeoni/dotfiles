@@ -9,7 +9,7 @@ if [ -d "/bin/apt" ]; then
 
   yes | sudo apt install tmux fzf stow
   # ubuntu/debian doesn't ship with latest nvim
-  sudo wget -O /usr/bin/nvim https://github.com/neovim/neovim/releases/download/v0.10.1/nvim.appimage
+  sudo wget -O /usr/bin/nvim https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage
   sudo chmod 755 /usr/bin/nvim
 
   # Needed for zsh
@@ -24,5 +24,6 @@ stow zsh
 stow alacritty
 stow nvim
 stow tmux
+stow fonts
 
 source $HOME/.zshrc 
