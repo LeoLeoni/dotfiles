@@ -27,7 +27,16 @@ map("n", "<leader>fw", "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", { d
 map("n", "<leader>fs", "<cmd> Telescope lsp_document_symbols <CR>", { desc = "workspace symbols" })
 map("n", "<leader>gs", "<cmd> Telescope git_status <CR>", { desc = "git status" })
 
+map("n", "<leader>tt", "<cmd> Telescope resume <CR>", { desc = "Repeat Telescope" })
+
 map("n", "<leader>rh", require("gitsigns").reset_hunk, { desc = "Reset Hunk" })
 map("n", "<leader>ph", require("gitsigns").preview_hunk, { desc = "Preview Hunk" })
 map("n", "<leader>gb", require("gitsigns").blame_line, { desc = "Blame Line" })
+
+map("n", "<leader>nh", function()
+  require("gitsigns").nav_hunk("next")
+end, { desc = "Next Hunk" })
+map("n", "<leader>Nh", function()
+  require("gitsigns").nav_hunk("prev")
+end, { desc = "Previous Hunk" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
