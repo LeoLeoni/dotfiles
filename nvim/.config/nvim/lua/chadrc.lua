@@ -5,8 +5,8 @@
 local M = {}
 
 M.base46 = {
-  theme = "tokyonight",
-  theme_toggle = { "tokyonight", "tokyonight" },
+  theme = "chadracula-evondev",
+  theme_toggle = { "chadracula-evondev", "chadracula-evondev" },
   telescope = { style = "bordered" },
 
   hl_override = {
@@ -41,6 +41,7 @@ M.mason = {
     "kotlin-language-server",
     "ktlint",
     "rust-analyzer",
+    "clangd",
     -- "gopls",
   },
 }

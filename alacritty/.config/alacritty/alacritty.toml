@@ -26,6 +26,7 @@ key = "F11"
 program = "/bin/zsh"
 
 [window]
-decorations_theme_variant = "Dark"
+decorations = "None"
+# decorations_theme_variant = "Dark"
 dynamic_title = true
 title = "Terminal"

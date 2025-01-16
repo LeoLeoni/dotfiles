@@ -1,7 +1,9 @@
-theme = catppuccin-mocha
+theme = Dracula
 font-size = 13
 font-family = JetBrains Mono Nerd Font
 # font-style = Regular
 shell-integration = zsh
 # gtk-tabs-location = hidden
 window-decoration = false
+command = /bin/zsh
+cursor-style = block

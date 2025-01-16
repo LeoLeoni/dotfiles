@@ -6,6 +6,7 @@ local options = {
     javascript = { "eslint", "prettier" },
     typescript = { "eslint", "prettier" },
     typescriptreact = { "eslint", "prettier" },
+    c = { "clangd" },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },

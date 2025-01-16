@@ -33,6 +33,10 @@ return {
     end,
   },
   {
+    'mrcjkb/rustaceanvim',
+    lazy = false, -- This plugin is already lazy
+  },
+  {
     "nvim-tree/nvim-tree.lua",
     opts = require "configs.nvimtree",
   },
@@ -52,6 +56,7 @@ return {
         "rust",
         "go",
         "java",
+        "c",
       },
     },
   },
