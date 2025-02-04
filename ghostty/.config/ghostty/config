@@ -3,7 +3,6 @@ font-size = 13
 font-family = JetBrains Mono Nerd Font
 # font-style = Regular
 shell-integration = zsh
-# gtk-tabs-location = hidden
 command = /bin/zsh
 cursor-style = block
 config-file = ?local_config
