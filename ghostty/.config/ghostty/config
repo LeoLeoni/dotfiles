@@ -5,4 +5,6 @@ font-family = JetBrains Mono Nerd Font
 shell-integration = zsh
 command = /bin/zsh
 cursor-style = block
+cursor-invert-fg-bg = true
+shell-integration-features = no-cursor
 config-file = ?local_config
