@@ -13,8 +13,8 @@ return {
     config = function()
       require("lint").linters_by_ft = {
         kotlin = { "ktlint" },
-        typescript = { "eslint" },
-        typescriptreact = { "eslint" },
+        typescript = { "eslint_d" },
+        typescriptreact = { "eslint_d" },
       }
     end,
   },
