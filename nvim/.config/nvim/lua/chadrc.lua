@@ -1,5 +1,5 @@
 -- This file needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
+-- https://github.com/NvChad/ui/blob/v3.0/lua/nvconfig.lua
 
 ---@type ChadrcConfig
 local M = {}
@@ -13,8 +13,8 @@ M.base46 = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
     -- Matches don't look good on catppuccin
-    Search = { bg = "vibrant_green" },
-    Substitute = { bg = "vibrant_green" },
+    -- Search = { bg = "vibrant_green" },
+    -- Substitute = { bg = "vibrant_green" },
   },
 
   integrations = { "navic", "todo" },
@@ -36,7 +36,7 @@ M.mason = {
     "prettier",
     "typescript-language-server",
     "eslint_d",
-    -- "eslint-lsp",
+    "eslint-lsp",
     "json-lsp",
     "kotlin-language-server",
     "ktlint",

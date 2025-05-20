@@ -29,7 +29,7 @@ autocmd("FileType", {
   end,
 })
 
-autocmd({ "InsertLeave", "BufWritePost" }, {
+autocmd({ "InsertLeave", "BufWritePost", "BufReadPost" }, {
   callback = function()
     -- try_lint without arguments runs the linters defined in `linters_by_ft`
     -- for the current filetype

@@ -27,6 +27,15 @@ lspconfig.ts_ls.setup {
   },
 }
 
+lspconfig.eslint.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+  init_options = {
+    filetypes = { "typescriptreact, typescript" },
+  },
+}
+
 vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
   border = "single",
 })

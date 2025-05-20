@@ -22,6 +22,10 @@ map("n", "K", function()
   vim.lsp.buf.hover()
 end, { desc = "LSP Hover" })
 
+map("n", "<leader>ca", function ()
+  vim.lsp.buf.code_action()
+end, { desc = "LSP Code Action" })
+
 map("n", "<leader>fg", "<cmd> Telescope live_grep <CR>", { desc = "live grep" })
 map("n", "<leader>gr", "<cmd> Telescope lsp_references <CR>", { desc = "telescope references" })
 map("n", "<leader>fw", "<cmd> Telescope lsp_dynamic_workspace_symbols <CR>", { desc = "workspace symbols" })

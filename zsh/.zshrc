@@ -37,5 +37,7 @@ alias gc="git checkout $@"
 alias ga="git add $@"
 alias n="nvim $@"
 
+export EDITOR="nvim"
+
 # keep work specific stuff separate
 test -f $HOME/.workrc && source $HOME/.workrc
