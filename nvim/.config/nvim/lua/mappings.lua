@@ -18,8 +18,9 @@ map("n", "N", "Nzz")
 map("n", "*", "*zz")
 map("n", "#", "#zz")
 
+-- Put a border on the hover window. Ideally this would be set in vim.o.winborder but it makes telescope look like shit
 map("n", "K", function()
-  vim.lsp.buf.hover()
+  vim.lsp.buf.hover({ border = "single" })
 end, { desc = "LSP Hover" })
 
 map("n", "<leader>ca", function ()

@@ -1,3 +1,4 @@
+require "nvchad.autocmds"
 local o = vim.o
 local autocmd = vim.api.nvim_create_autocmd
 
