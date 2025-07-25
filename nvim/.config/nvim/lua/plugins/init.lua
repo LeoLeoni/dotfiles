@@ -57,6 +57,7 @@ return {
         "go",
         "java",
         "c",
+        "python",
       },
     },
   },

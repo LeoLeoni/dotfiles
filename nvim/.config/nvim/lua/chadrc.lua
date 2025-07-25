@@ -42,6 +42,7 @@ M.mason = {
     "ktlint",
     "rust-analyzer",
     "clangd",
+    "pyright",
     -- "gopls",
   },
 }

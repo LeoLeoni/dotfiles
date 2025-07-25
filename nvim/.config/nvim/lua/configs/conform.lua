@@ -7,6 +7,7 @@ local options = {
     typescript = { "eslint_d", "prettier" },
     typescriptreact = { "eslint_d", "prettier" },
     c = { "clangd" },
+    python = { "pyright" },
     -- css = { "prettier" },
     -- html = { "prettier" },
   },
