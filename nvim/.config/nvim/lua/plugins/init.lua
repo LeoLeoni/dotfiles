@@ -3,9 +3,7 @@ return {
     "stevearc/conform.nvim",
     lazy = false,
     -- event = 'BufWritePre', -- uncomment for format on save
-    config = function()
-      require "configs.conform"
-    end,
+    opts = require "configs.conform"
   },
   {
     "mfussenegger/nvim-lint",
@@ -28,7 +26,6 @@ return {
     --   end,
     -- },
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },

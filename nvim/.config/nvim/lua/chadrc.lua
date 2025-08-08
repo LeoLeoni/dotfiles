@@ -7,14 +7,13 @@ local M = {}
 M.base46 = {
   theme = "rosepine",
   theme_toggle = { "rosepine", "rosepine" },
-  telescope = { style = "bordered" },
 
   hl_override = {
-    Comment = { italic = true },
-    ["@comment"] = { italic = true },
+    ["@comment"] = { italic = true, fg = "#6d6b78" },
     -- Matches don't look good on catppuccin
     -- Search = { bg = "vibrant_green" },
     -- Substitute = { bg = "vibrant_green" },
+    TelescopeBorder = { fg = "light_grey" }
   },
 
   integrations = { "navic", "todo" },
@@ -25,6 +24,7 @@ M.ui = {
   tabufline = {
     order = { "buffers", "tabs", "btns" },
   },
+  telescope = { style = "bordered" },
 }
 
 M.mason = {
@@ -38,7 +38,7 @@ M.mason = {
     "eslint_d",
     "eslint-lsp",
     "json-lsp",
-    "kotlin-language-server",
+    "kotlin-lsp",
     "ktlint",
     "rust-analyzer",
     "clangd",

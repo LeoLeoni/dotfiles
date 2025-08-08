@@ -6,7 +6,7 @@ if [ -d "/bin/apt" ]; then
 
   yes | sudo apt install tmux fzf stow
   # ubuntu/debian doesn't ship with latest nvim
-  sudo wget -O /usr/bin/nvim https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.appimage
+  sudo wget -O /usr/bin/nvim https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-linux-x86_64.appimage
   sudo chmod 755 /usr/bin/nvim
 
   # Needed for zsh
