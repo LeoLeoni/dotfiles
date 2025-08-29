@@ -1,4 +1,5 @@
 @import "mocha.css";
+@import "rose-pine.css";
 
 * {
   font-family: JetBrainsMono Nerd Font;
@@ -44,6 +45,7 @@
 #memory,
 #network,
 #pulseaudio,
+#custom-pkg_updates,
 #custom-lock,
 #custom-power {
   background-color: @surface0;
@@ -82,7 +84,7 @@
     border-radius: 0;
 }
 
-#pulseaudio {
+#custom-pkg_updates {
   color: @maroon;
   border-radius: 1rem 0px 0px 1rem;
   margin-left: 1rem;

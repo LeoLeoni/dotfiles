@@ -16,6 +16,7 @@
         "sway/window"
     ],
     "modules-right": [
+        "custom/pkg_updates",
         "mpd",
         //"idle_inhibitor",
         "pulseaudio",
@@ -61,6 +62,12 @@
     "hyprland/submap": {
         "format": "<span style=\"italic\">{}</span>"
     },
+    "custom/pkg_updates": {
+      "exec": "~/.config/waybar/scripts/pkg_updates.sh",
+      "interval": 3600,
+      "return-type": "json",
+      "format": "{}"
+    },
     "sway/scratchpad": {
         "format": "{icon} {count}",
         "show-empty": false,
@@ -85,11 +92,18 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "{usage}%",
         "tooltip": false
     },
+    "custom/mem": {
+      "exec": "free -h | awk '/^Mem/ { print $3 }' | sed s/i//g",
+      "interval": 30,
+      "return-type": "text",
+      "format": " {}"
+    },
     "memory": {
-        "format": " {}%"
+        "format": " {used} GiB",
+        "interval": 30
     },
     "temperature": {
         // "thermal-zone": 2,
