@@ -19,7 +19,7 @@
         "battery",
         "battery#bat2",
         "clock",
-        "custom/eww",
+        // "custom/eww",
     ],
     "spacing": 4, // Gaps between modules (4px)
     // Modules configuration
