@@ -40,6 +40,9 @@
 #cpu,
 #network,
 #pulseaudio,
+#backlight,
+#battery,
+#battery#bat2,
 #custom-mem,
 #custom-eww,
 #custom-pkg_updates {
@@ -48,6 +51,12 @@
   margin: 5px 0;
 }
 
+#backlight {
+  color: @peach;
+}
+#battery {
+  color: @yellow;
+}
 #clock {
   background-color: @blue;
   margin-top: 5px;
