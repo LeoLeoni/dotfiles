@@ -4,7 +4,7 @@
     "height": 30,
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
+        "hyprland/workspaces"
     ],
     "modules-center": [
     ],
@@ -18,8 +18,8 @@
         "backlight",
         "battery",
         "battery#bat2",
-        "clock",
-        "custom/eww",
+        "clock"
+        // "custom/eww",
     ],
     "spacing": 4, // Gaps between modules (4px)
     // Modules configuration
@@ -66,7 +66,7 @@
             "headphone": "",
             "muted": "󰖁 ",
             "default": ["", "", ""]
-        },
+        }
     },
     "cpu": {
         "format-icons":  ["<span color='#1e1e2e' background='#a6e3a1'>\u2009CPU\u2009</span>"],
@@ -87,7 +87,7 @@
         "tooltip-format": "{ifname}: {ipaddr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
-        "on-click": "ghostty -e nmtui",
+        "on-click": "ghostty -e nmtui"
     },
     "backlight": {
         "device": "intel_backlight",
