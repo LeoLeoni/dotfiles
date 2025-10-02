@@ -1,0 +1,15 @@
+#!/bin/zsh
+
+headvol() {
+  pamixer --get-volume
+}
+
+mastervol() {
+  pamixer --get-volume
+}
+
+micvol() {
+  amixer sget Mic | grep 'Left:' | cut -d\  -f7 | tr -d '[%]'
+}
+
+"$@"

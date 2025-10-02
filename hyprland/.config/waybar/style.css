@@ -3,14 +3,13 @@
 
 * {
   font-family: JetBrainsMono Nerd Font;
-  font-size: 17px;
+  font-size: 16px;
   min-height: 0;
 }
 
 #waybar {
   background: transparent;
   color: @text;
-  margin: 5px 5px;
 }
 
 #workspaces {
@@ -36,52 +35,41 @@
   border-radius: 1rem;
 }
 
-#custom-music,
 #tray,
-#backlight,
 #clock,
-#battery,
 #cpu,
-#memory,
 #network,
 #pulseaudio,
-#custom-pkg_updates,
-#custom-lock,
-#custom-power {
-  background-color: @surface0;
+#custom-mem,
+#custom-eww,
+#custom-pkg_updates {
+  background-color: @base;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
 
 #clock {
-  color: @blue;
+  background-color: @blue;
+  margin-top: 5px;
+  color: @base;
 }
 
-#battery {
-  color: @green;
-}
-
-#battery.charging {
-  color: @green;
-}
-
-#battery.warning:not(.charging) {
-  color: @red;
-}
-
-#backlight {
-  color: @yellow;
-}
 
 #cpu {
-  color: @peach;
+  color: @green;
 }
 
-#memory {
-  color: @teal;
+#cpu,
+#network {
+  border-radius: 0;
 }
-#backlight, #battery, #cpu, #memory, #network {
-    border-radius: 0;
+#custom-mem {
+    background: @base;
+    color: @blue;
+}
+#custom-mem .icon {
+    color: @base;
+    background: @blue;
 }
 
 #custom-pkg_updates {
@@ -90,23 +78,19 @@
   margin-left: 1rem;
 }
 
-#custom-music {
-  color: @mauve;
-  border-radius: 1rem;
-}
-
 #network {
   color: @lavender;
 }
-#custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
-}
 
 #custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @red;
+  min-width: 30px;
+}
+#custom-eww {
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 5px;
 }
 
 #tray {
