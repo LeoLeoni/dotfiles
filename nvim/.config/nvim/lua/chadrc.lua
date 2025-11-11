@@ -24,7 +24,7 @@ M.ui = {
   tabufline = {
     order = { "buffers", "tabs", "btns" },
   },
-  telescope = { style = "bordered" },
+  -- telescope = { style = "bordered" },
 }
 
 M.mason = {
