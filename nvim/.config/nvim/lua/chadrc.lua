@@ -29,14 +29,12 @@ M.ui = {
 
 M.mason = {
   pkgs = {
+    "biome",
     "lua-language-server",
     "stylua",
     "html-lsp",
     "css-lsp",
-    "prettier",
     "typescript-language-server",
-    "eslint_d",
-    "eslint-lsp",
     "json-lsp",
     "kotlin-lsp",
     "ktlint",

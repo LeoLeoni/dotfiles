@@ -11,20 +11,13 @@ return {
     config = function()
       require("lint").linters_by_ft = {
         kotlin = { "ktlint" },
-        typescript = { "eslint_d" },
-        typescriptreact = { "eslint_d" },
+        typescript = { "biomejs" },
+        typescriptreact = { "biomejs" },
       }
     end,
   },
   {
     "neovim/nvim-lspconfig",
-    -- NOTE: Re enable null-ls if the other linters are a PITA
-    -- dependencies = {
-    --   "jose-elias-alvarez/null-ls.nvim",
-    --   config = function()
-    --     require "configs.null-ls"
-    --   end,
-    -- },
     config = function()
       require "configs.lspconfig"
     end,

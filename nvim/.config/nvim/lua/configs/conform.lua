@@ -3,13 +3,10 @@ local options = {
     lua = { "stylua" },
     go = { "gofmt" },
     rust = { "rustfmt" },
-    javascript = { "eslint_d", "prettier" },
-    typescript = { "eslint_d", "prettier" },
-    typescriptreact = { "eslint_d", "prettier" },
-    c = { "clangd" },
-    python = { "pyright" },
-    -- css = { "prettier" },
-    -- html = { "prettier" },
+    javascript = { "biome" },
+    typescript = { "biome" },
+    typescriptreact = { "biome" },
+    kotlin = { "ktlint" }
   },
 
   -- These options will be passed to conform.format()
