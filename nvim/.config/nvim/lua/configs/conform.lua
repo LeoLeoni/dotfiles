@@ -3,17 +3,25 @@ local options = {
     lua = { "stylua" },
     go = { "gofmt" },
     rust = { "rustfmt" },
-    javascript = { "biome" },
-    typescript = { "biome" },
-    typescriptreact = { "biome" },
+    javascript = { "biome-check" },
+    typescript = { "biome-check" },
+    typescriptreact = { "biome-check" },
     kotlin = { "ktlint" }
+  },
+  formatters = {
+    biome_check = {
+      append_args = {
+        "--diagnostic-level=error",
+        "--linter-enabled=true"
+      }
+    }
   },
 
   -- These options will be passed to conform.format()
-  -- format_on_save = {
-  --   timeout_ms = 500,
-  --   lsp_fallback = true,
-  -- },
+  format_on_save = {
+    timeout_ms = 500,
+    lsp_fallback = false,
+  },
 }
 
 return options

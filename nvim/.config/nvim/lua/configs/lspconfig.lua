@@ -8,6 +8,7 @@ local servers = {
   pyright = {},
   gopls = {},
   biome = {},
+  jsonls = {},
   ts_ls = {
     init_options = {
       hostinfo = "neovim",
