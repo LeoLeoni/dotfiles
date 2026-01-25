@@ -12,16 +12,16 @@ function precmd () {
 
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
-PROMPT='%B%F{green}%n%f%b %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f%% '
+PROMPT='%B%F{green}%n%b%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f%% '
 promptinit
 
 DISABLE_AUTO_TITLE="true"
 
-alias ll="ls -alF $@"
-alias la="ls -A $@"
-alias l="ls -CF $@"
-
 compinit
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # zoxide
 eval "$(zoxide init --cmd cd zsh)"
@@ -29,7 +29,6 @@ eval "$(zoxide init --cmd cd zsh)"
 alias ll="ls -alF $@"
 alias la="ls -A $@"
 alias l="ls -CF $@"
-
 alias g="git $@"
 alias gs="git status $@"
 alias gd="git diff $@"
