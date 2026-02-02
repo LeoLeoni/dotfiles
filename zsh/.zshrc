@@ -19,6 +19,8 @@ DISABLE_AUTO_TITLE="true"
 
 compinit
 
+eval "$(direnv hook zsh)"
+
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
