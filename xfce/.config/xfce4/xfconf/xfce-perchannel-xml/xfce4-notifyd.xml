@@ -6,4 +6,10 @@
     <property name="hide-on-read" type="bool" value="false"/>
     <property name="hide-clear-prompt" type="bool" value="false"/>
   </property>
+  <property name="applications" type="empty">
+    <property name="known_applications" type="array">
+      <value type="string" value="chromium"/>
+      <value type="string" value="IDEA"/>
+    </property>
+  </property>
 </channel>
