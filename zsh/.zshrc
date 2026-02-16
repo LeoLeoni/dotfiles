@@ -10,23 +10,35 @@ function precmd () {
     vcs_info
 }
 
+# For showing git info in prompt
 zstyle ':vcs_info:git:*' formats '%b '
 setopt PROMPT_SUBST
-PROMPT='%B%F{green}%n%b%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f%% '
+
+# Over ssh connection show the hostname to avoid confusion
+if [[ -n "$SSH_CONNECTION" ]]; then
+    PROMPT='%B%F{green}%n%f%F{8}@%f%F{cyan}%m%b%f %F{blue}%~%f %F{magenta}${vcs_info_msg_0_}%f%% '
+else
+    PROMPT='%B%F{green}%n%b%f %F{blue}%~%f %F{magenta}${vcs_info_msg_0_}%f%% '
+fi
 promptinit
 
 DISABLE_AUTO_TITLE="true"
 
 compinit
 
-eval "$(direnv hook zsh)"
+# direnv
+if (( $+commands[direnv] )); then
+    eval "$(direnv hook zsh)"
+fi
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
 # zoxide
-eval "$(zoxide init --cmd cd zsh)"
+if (( $+commands[zoxide] )); then
+    eval "$(zoxide init --cmd cd zsh)"
+fi
 
 alias ll="ls -alF $@"
 alias la="ls -A $@"
