@@ -15,8 +15,11 @@
         "cpu", 
         "custom/mem", 
         "network",
-        "clock",
-        "custom/eww",
+        "backlight",
+        "battery",
+        "battery#bat2",
+        "clock"
+        // "custom/eww",
     ],
     "spacing": 4, // Gaps between modules (4px)
     // Modules configuration
@@ -85,6 +88,29 @@
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ⚠",
         "on-click": "ghostty -e nmtui",
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
     },
     "clock": {
         "timezone": "America/New_York",
