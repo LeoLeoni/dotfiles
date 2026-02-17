@@ -31,7 +31,7 @@ if (( $+commands[direnv] )); then
     eval "$(direnv hook zsh)"
 fi
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+test -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
 
