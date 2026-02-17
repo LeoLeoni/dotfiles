@@ -8,8 +8,15 @@
   </property>
   <property name="applications" type="empty">
     <property name="known_applications" type="array">
+      <value type="string" value="app.bluebubbles.BlueBubbles"/>
       <value type="string" value="chromium"/>
+      <value type="string" value="Firefox"/>
       <value type="string" value="IDEA"/>
+      <value type="string" value="signal"/>
     </property>
   </property>
+  <property name="date-time-custom-format" type="string" value="%a %H:%M:%S"/>
+  <property name="do-fadeout" type="bool" value="false"/>
+  <property name="initial-opacity" type="double" value="1"/>
+  <property name="expire-timeout-enabled" type="bool" value="false"/>
 </channel>
