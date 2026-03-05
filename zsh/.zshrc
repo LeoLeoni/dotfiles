@@ -48,6 +48,7 @@ alias gs="git status $@"
 alias gd="git diff $@"
 alias gc="git checkout $@"
 alias ga="git add $@"
+alias lg="lazygit $@"
 alias n="nvim $@"
 
 export EDITOR="nvim"
