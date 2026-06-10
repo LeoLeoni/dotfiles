@@ -10,6 +10,7 @@
     <property name="known_applications" type="array">
       <value type="string" value="app.bluebubbles.BlueBubbles"/>
       <value type="string" value="chromium"/>
+      <value type="string" value="firefox"/>
       <value type="string" value="Firefox"/>
       <value type="string" value="IDEA"/>
       <value type="string" value="signal"/>
