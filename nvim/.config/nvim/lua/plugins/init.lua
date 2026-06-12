@@ -3,7 +3,7 @@ return {
     "stevearc/conform.nvim",
     lazy = false,
     -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform"
+    opts = require "configs.conform",
   },
   {
     "mfussenegger/nvim-lint",
@@ -23,7 +23,7 @@ return {
     end,
   },
   {
-    'mrcjkb/rustaceanvim',
+    "mrcjkb/rustaceanvim",
     lazy = false, -- This plugin is already lazy
   },
   {
@@ -32,6 +32,8 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    -- commit = "7caec274fd19c12b55902a5b795100d21531391f",
     opts = {
       ensure_installed = {
         "vim",
@@ -55,18 +57,18 @@ return {
     "folke/todo-comments.nvim",
     lazy = false,
     dependencies = { "nvim-lua/plenary.nvim" },
-    config = function ()
+    config = function()
       dofile(vim.g.base46_cache .. "todo")
       require("todo-comments").setup {
-      highlight = {
-        before = "fg",
-        keyword = "fg",
-      },
-      search = {
-        pattern = [[\b(KEYWORDS)\b]],
-      },
+        highlight = {
+          before = "fg",
+          keyword = "fg",
+        },
+        search = {
+          pattern = [[\b(KEYWORDS)\b]],
+        },
       }
-    end
+    end,
   },
   {
     "lewis6991/gitsigns.nvim",
@@ -90,12 +92,12 @@ return {
     end,
   },
   {
-    "ggandor/leap.nvim",
+    "https://codeberg.org/andyg/leap.nvim",
     lazy = false,
     dependencies = { "tpope/vim-repeat" },
     config = function()
-      vim.keymap.set({ 'n', 'x', 'o' }, 's', '<Plug>(leap-forward)')
-      vim.keymap.set({ 'n', 'x', 'o' }, 'S', '<Plug>(leap-backward)')
+      vim.keymap.set({ "n", "x", "o" }, "s", "<Plug>(leap-forward)")
+      vim.keymap.set({ "n", "x", "o" }, "S", "<Plug>(leap-backward)")
     end,
   },
 }
