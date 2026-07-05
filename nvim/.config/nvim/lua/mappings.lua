@@ -20,10 +20,10 @@ map("n", "#", "#zz")
 
 -- Put a border on the hover window. Ideally this would be set in vim.o.winborder but it makes telescope look like shit
 map("n", "K", function()
-  vim.lsp.buf.hover({ border = "single" })
+  vim.lsp.buf.hover { border = "single" }
 end, { desc = "LSP Hover" })
 
-map("n", "<leader>ca", function ()
+map("n", "<leader>ca", function()
   vim.lsp.buf.code_action()
 end, { desc = "LSP Code Action" })
 
@@ -40,9 +40,9 @@ map("n", "<leader>ph", require("gitsigns").preview_hunk, { desc = "Preview Hunk"
 map("n", "<leader>gb", require("gitsigns").blame_line, { desc = "Blame Line" })
 
 map("n", "<leader>nh", function()
-  require("gitsigns").nav_hunk("next")
+  require("gitsigns").nav_hunk "next"
 end, { desc = "Next Hunk" })
 map("n", "<leader>Nh", function()
-  require("gitsigns").nav_hunk("prev")
+  require("gitsigns").nav_hunk "prev"
 end, { desc = "Previous Hunk" })
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
