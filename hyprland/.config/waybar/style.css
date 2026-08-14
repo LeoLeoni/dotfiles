@@ -1,99 +1,108 @@
-@import "mocha.css";
-@import "rose-pine.css";
+@import "./rose-pine.css";
 
 * {
-  font-family: JetBrainsMono Nerd Font;
-  font-size: 16px;
-  min-height: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrainsMono Nerd Font Bold;
+    font-size: 16px;
 }
 
-#waybar {
-  background: transparent;
-  color: @text;
+window#waybar {
+    background-color: transparent;
+    color: @text;
 }
 
-#workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
-  margin-left: 1rem;
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    border: none;
 }
 
-#workspaces button {
-  color: @lavender;
-  border-radius: 1rem;
-  padding: 0.4rem;
-}
-
-#workspaces button.active {
-  color: @red;
-  border-radius: 1rem;
-}
-
-#workspaces button:hover {
-  color: @sapphire;
-  border-radius: 1rem;
-}
-
-#tray,
+#custom-pkg_updates,
+#custom-power,
 #clock,
-#cpu,
-#network,
+#battery,
 #pulseaudio,
-#custom-mem,
-#custom-eww,
-#custom-pkg_updates {
-  background-color: @base;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
-}
-
-#clock {
-  background-color: @blue;
-  margin-top: 5px;
-  color: @base;
-}
-
-
-#cpu {
-  color: @green;
-}
-
+#network,
+#temperature,
+#tray,
+#memory,
 #cpu,
-#network {
-  border-radius: 0;
-}
-#custom-mem {
-    background: @base;
-    color: @blue;
-}
-#custom-mem .icon {
-    color: @base;
-    background: @blue;
+#workspaces,
+#backlight {
+  background: @base;
+  opacity: 0.9;
+  padding: 0 10px;
+  margin: 4px 0 0 0;
+  border: 2px solid @highlightHigh;
 }
 
 #custom-pkg_updates {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+  border-radius: 8px 0 0 8px;
+  color: @rose;
 }
-
 #network {
-  color: @lavender;
+  color: @rose;
+}
+#cpu, #memory {
+  color: @pine;
+}
+#pulseaudio, #backlight {
+  color: @iris;
+}
+#clock {
+  color: @foam;
+}
+#custom-power {
+  color: #1793d1;
+  font-size: 18px;
+  padding-right: 5px;
 }
 
-#custom-power {
-  margin-right: 1rem;
-  border-radius: 0px 1rem 1rem 0px;
-  color: @red;
-  min-width: 30px;
+#backlight, #battery {
+  border-radius: 8px 0 0 8px;
+  margin-left: 5px;
 }
-#custom-eww {
-  border-radius: 0px 1rem 1rem 0px;
+#pulseaudio, #temperature, #custom-power {
+  border-radius: 0 8px 8px 0;
   margin-right: 5px;
 }
 
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
+#workspaces {
+  border-radius: 8px;
+  padding: 0 2px;
+}
+#workspaces button {
+  color: @subtle;
+  border-radius: 0;
+  box-shadow: inset 0 -3px transparent;
+  padding: 0 4px;
+}
+#workspaces button.active {
+  color: @gold;
+  box-shadow: inset 0 -3px @gold;
+}
+#workspaces button.focused {
+  color: @text;
+  background: @love;
+}
+#workspaces button.urgent {
+  color: @base;
+  background: @pine;
+}
+
+#battery {
+  color: @foam;
+}
+#battery.critical:not(.charging) {
+  color: @love;
+}
+#battery.charging, #battery.plugged {
+  color: @pine
+}
+
+#temperature {
+  color: @gold;
+}
+#temperature.critical {
+    color: @love;
 }

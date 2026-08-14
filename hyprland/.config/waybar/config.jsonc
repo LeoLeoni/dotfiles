@@ -1,24 +1,26 @@
 // -*- mode: jsonc -*-
 {
-    "layer": "top",
-    "height": 30,
+    "spacing": -1,
     // Choose the order of the modules
     "modules-left": [
         "hyprland/workspaces",
+        "hyprland/submap"
     ],
-    "modules-center": [
-    ],
+    "modules-center": [],
     "modules-right": [
         "custom/pkg_updates",
-        //"idle_inhibitor",
-        "pulseaudio",
-        "cpu", 
-        "custom/mem", 
         "network",
+        "cpu",
+        "memory",
+        "temperature",
+        "backlight",
+        "keyboard-state",
+        "pulseaudio",
+        "battery",
         "clock",
-        "custom/eww",
+        "tray",
+        "custom/power"
     ],
-    "spacing": 4, // Gaps between modules (4px)
     // Modules configuration
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -36,9 +38,69 @@
     //         "default": ""
     //     }
     // },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
     "tray": {
         // "icon-size": 21,
-        "spacing": 10
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 85,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "min-brightness": 1
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": "󰃨 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
+        // "format-good": "", // An empty format will hide the module
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{icon}{signalStrength}%",
+        "format-icons": [" "],
+        "format-ethernet": "󰈀",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "ghostty -e nmtui"
     },
     "custom/pkg_updates": {
       "exec": "~/.config/waybar/scripts/pkg_updates.sh",
@@ -46,56 +108,26 @@
       "return-type": "json",
       "format": "{}"
     },
-    //"idle_inhibitor": {
-    //    "format": "{icon}",
-    //    "format-icons": {
-    //        "activated": "",
-    //        "deactivated": ""
-    //    }
-    //},
     "pulseaudio": {
-        "scroll-step": 2, // %, can be a float
-        "format": "{icon} {volume}",
-        "format-muted": "󰖁 {volume}",
-        "format-bluetooth": "{icon} {volume}",
-        "format-bluetooth-muted": "󰖁 {volume}",
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%",
+        "format-muted": "  {volume}%",
         "format-icons": {
             "headphone": "",
-            "muted": "󰖁 ",
-            "default": ["", "", ""]
+            "default": ["", " ", " "]
         },
+        "on-click": "pavucontrol"
     },
-    "cpu": {
-        "format-icons":  ["<span color='#1e1e2e' background='#a6e3a1'>\u2009CPU\u2009</span>"],
-        "format": "{icon} {usage}%",
-        "tooltip": false
-    },
-    "custom/mem": {
-      "exec": "free -h | awk '/^Mem/ { print $3 }' | sed s/i//g",
-      "interval": 30,
-      "return-type": "text",
-      "format-icons":  ["<span color='#1e1e2e' background='#89b4fa'>\u2009 </span>"],
-      "format": "{icon} {text}"
-    },
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": " {signalStrength}%",
-        "format-ethernet": "󰈀",
-        "tooltip-format": "{ifname}: {ipaddr}",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "on-click": "ghostty -e nmtui",
-    },
-    "clock": {
-        "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%I:%M %p}",
-        "format-alt": "{:%Y-%m-%d}",
-    },
-    "custom/eww": {
-      "format": " ",
-      "icon": " ",
-      "tooltip": false,
-      "on-click": "eww close eww || eww open eww"
+    "custom/power": {
+        "format" : " ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		}
     }
 }
