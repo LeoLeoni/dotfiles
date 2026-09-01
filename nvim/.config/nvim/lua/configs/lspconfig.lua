@@ -9,6 +9,7 @@ local servers = {
   gopls = {},
   biome = {},
   jsonls = {},
+  svelte = {},
   ts_ls = {
     init_options = {
       hostinfo = "neovim",

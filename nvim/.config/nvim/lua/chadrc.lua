@@ -13,7 +13,7 @@ M.base46 = {
     -- Matches don't look good on catppuccin
     -- Search = { bg = "vibrant_green" },
     -- Substitute = { bg = "vibrant_green" },
-    TelescopeBorder = { fg = "light_grey" }
+    TelescopeBorder = { fg = "light_grey" },
   },
 
   integrations = { "navic", "todo" },
@@ -41,6 +41,7 @@ M.mason = {
     "rust-analyzer",
     "clangd",
     "pyright",
+    "svelte-language-server",
     -- "gopls",
   },
 }

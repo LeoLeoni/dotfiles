@@ -36,6 +36,7 @@ return {
     -- commit = "7caec274fd19c12b55902a5b795100d21531391f",
     opts = {
       ensure_installed = {
+        "svelte",
         "vim",
         "lua",
         "vimdoc",
@@ -51,6 +52,7 @@ return {
         "c",
         "python",
       },
+      highlight = { enable = true },
     },
   },
   {
