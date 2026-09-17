@@ -50,6 +50,8 @@ alias gc="git checkout $@"
 alias ga="git add $@"
 alias lg="lazygit $@"
 alias n="nvim $@"
+alias d="docker $@"
+alias dc="docker compose $@"
 
 export EDITOR="nvim"
 
